@@ -1,6 +1,6 @@
 #!/bin/bash
 # Easy install of Cheat
-# Author : astalios @ 04-11-2021
+# Author : astalios @ 2021-11-04
 # Version : 1.0
 
 if [ "$EUID" -ne 0 ]
@@ -58,6 +58,7 @@ sudo usermod -aG sudo $usr
 sudo usermod -aG commun $usr
 mkdir -pv /home/$usr/.config
 ln -s /opt/COMMUN/cheat /home/$usr/.config/cheat
+chown -R $usr:$usr /home/$usr/.config/
 echo "All done ! You should try cheat -l to see all your Cheatsheets !"
 }
 
