@@ -58,6 +58,7 @@ sudo usermod -aG sudo $usr
 sudo usermod -aG commun $usr
 mkdir -pv /home/$usr/.config
 ln -s /opt/COMMUN/cheat /home/$usr/.config/cheat
+chown -R $usr:$usr /home/$usr/.config
 echo "All done ! You should try cheat -l to see all your Cheatsheets !"
 }
 
